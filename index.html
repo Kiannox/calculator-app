@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="scripts/change-theme.js" defer></script>
+    <script src="scripts/calculator.js" defer></script>
+    <title>Calculator</title>
+  </head>
+  <body class="theme-one-body-bg">
+    <main class="calc-body theme-one-body-bg">
+      <header class="header">
+        <h2 class="theme-one-font-color">calc</h2>
+        <div class="theme-select">
+          <h6 class="theme-one-font-color">THEME</h6>
+          <div class="switch-inputs theme-one-switch-color">
+            <input
+              type="radio"
+              id="theme-one"
+              name="switch"
+              value="1"
+              checked
+            />
+            <input type="radio" id="theme-two" name="switch" value="2" />
+            <input type="radio" id="theme-three" name="switch" value="3" />
+          </div>
+        </div>
+      </header>
+      <div id="screen" class="theme-one-screen-bg theme-one-font-color">0</div>
+      <div class="keypad theme-one-keypad-bg">
+        <button value="7" class="num theme-one-key-color theme-one-key-hover">
+          7
+        </button>
+        <button value="8" class="num theme-one-key-color theme-one-key-hover">
+          8
+        </button>
+        <button value="9" class="num theme-one-key-color theme-one-key-hover">
+          9
+        </button>
+        <button
+          value="DEL"
+          class="theme-one-key-color theme-one-del-reset-bg theme-one-del-reset-hover"
+        >
+          DEL
+        </button>
+        <button value="4" class="num theme-one-key-color theme-one-key-hover">
+          4
+        </button>
+        <button value="5" class="num theme-one-key-color theme-one-key-hover">
+          5
+        </button>
+        <button value="6" class="num theme-one-key-color theme-one-key-hover">
+          6
+        </button>
+        <button value="+" class="op theme-one-key-color theme-one-key-hover">
+          +
+        </button>
+        <button value="1" class="num theme-one-key-color theme-one-key-hover">
+          1
+        </button>
+        <button value="2" class="num theme-one-key-color theme-one-key-hover">
+          2
+        </button>
+        <button value="3" class="num theme-one-key-color theme-one-key-hover">
+          3
+        </button>
+        <button value="-" class="op theme-one-key-color theme-one-key-hover">
+          -
+        </button>
+        <button value="." type="button" class="num theme-one-key-color theme-one-key-hover">.</button>
+        <button value="0" class="num theme-one-key-color theme-one-key-hover">
+          0
+        </button>
+        <button value="/" class="op theme-one-key-color theme-one-key-hover">
+          /
+        </button>
+        <button value="*" class="op theme-one-key-color theme-one-key-hover">
+          X
+        </button>
+        <button
+          value="RESET"
+          class="theme-one-key-color theme-one-del-reset-bg theme-one-del-reset-hover"
+        >
+          RESET
+        </button>
+        <button
+          value="="
+          id="result"
+          class="theme-one-key-color theme-one-result-bg theme-one-result-hover"
+        >
+          =
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
