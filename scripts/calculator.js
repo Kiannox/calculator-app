@@ -13,15 +13,22 @@ let firstValue = '';
 let secondtValue = '';
 
 function inputHandler(e) {
-  if (result !== 0) {
-    return;
-  }
   if (!operatorFlag) {
     firstValue += e.target.value;
+    if (firstValue.charAt(0) === '.') {
+      firstValue = '';
+      alert('dot (.) can not take place at the beggining of your numbers!');
+      return;
+    }
     renderScreenHandler(firstValue);
     a = parseFloat(firstValue);
-  } else if (result === 0) {
+  } else {
     secondtValue += e.target.value;
+    if (secondtValue.charAt(0) === '.') {
+      secondtValue = '';
+      alert('dot (.) can not take place at the beggining of your numbers!');
+      return;
+    }
     b = parseFloat(secondtValue);
     renderScreenHandler(firstValue, operatorValue, secondtValue);
   }
@@ -33,7 +40,7 @@ function operatorHandler(e) {
   }
   operatorFlag = true;
   operatorValue = e.target.value;
-  renderScreenHandler(a, operatorValue);
+  renderScreenHandler(firstValue, operatorValue);
 }
 
 function renderScreenHandler(a, op = '', b = '') {
@@ -81,7 +88,12 @@ function resultHandler() {
       result = a / b;
       break;
   }
-  screen.textContent = parseFloat(result);
+  firstValue = result;
+  a = parseFloat(result);
+  b = 0;
+  secondtValue = '';
+  operatorFlag = false;
+  renderScreenHandler(firstValue);
 }
 
 resultBtn.addEventListener('click', resultHandler);
